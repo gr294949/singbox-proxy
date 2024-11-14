@@ -192,6 +192,41 @@
       ],
       "default": "direct"
     },
+   {
+      "tag": "jav",
+      "type": "selector",
+      "outbounds": [
+        "proxy",
+        "direct",
+        "hk",
+        "hk-auto",
+        "tw",
+        "tw-auto",
+        "jp",
+        "jp-auto",
+        "sg",
+        "sg-auto",
+        "us",
+        "us-auto",
+        "de",
+        "de-auto",
+        "gb",
+        "gb-auto",
+        "kr",
+        "kr-auto",
+        "fr",
+        "fr-auto",
+        "nl",
+        "nl-auto",
+        "in",
+        "in-auto",
+        "tr",
+        "tr-auto",
+        "all",
+        "all-auto"
+      ],
+      "default": "direct"
+    },
     {
       "tag": "telegram",
       "type": "selector",
@@ -733,6 +768,12 @@
         ],
         "outbound": "av"
       },
+     {
+        "rule_set": [
+          "jav"
+        ],
+        "outbound": "jav"
+      },
       {
         "rule_set": [
           "ai_non_ip"
@@ -905,6 +946,13 @@
         "type": "remote",
         "format": "binary",
         "url": "https://github.com/gr294949/sing-box-ruleset/raw/main/domainset/av.srs",
+        "download_detour": "proxy"
+      },
+     {
+        "tag": "jav",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/gr294949/sing-box-ruleset/raw/main/domainset/jav.srs",
         "download_detour": "proxy"
       },
       {
