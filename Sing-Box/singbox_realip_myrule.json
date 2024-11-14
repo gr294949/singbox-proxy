@@ -191,7 +191,7 @@
         "all",
         "all-auto"
       ],
-      "default": “proxy”
+      "default": “jp-auto”
     },
     {
       "tag": "telegram",
