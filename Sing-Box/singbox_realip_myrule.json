@@ -1,4 +1,3 @@
-
 {
   "log": {
     "disabled": false,
@@ -158,8 +157,8 @@
       ],
       "default": "direct"
     },
-    {
-      "tag": "av”,
+   {
+      "tag": "av",
       "type": "selector",
       "outbounds": [
         "proxy",
@@ -191,7 +190,7 @@
         "all",
         "all-auto"
       ],
-      "default": “jp-auto”
+      "default": "direct"
     },
     {
       "tag": "telegram",
@@ -675,7 +674,7 @@
         "all",
         "all-auto"
       ],
-      "default": “proxy”
+      "default": "direct"
     }
   ],
   "route": {
@@ -728,6 +727,12 @@
         ],
         "outbound": "stream"
       },
+     {
+        "rule_set": [
+          "av"
+        ],
+        "outbound": "av"
+      },
       {
         "rule_set": [
           "ai_non_ip"
@@ -752,12 +757,6 @@
           "microsoft_cdn_non_ip"
         ],
         "outbound": "direct"
-      },
-      {
-        "rule_set": [
-          “av”
-        ],
-        "outbound": “av”
       },
       {
         "rule_set": [
@@ -881,13 +880,6 @@
         "download_detour": "proxy"
       },
       {
-        "tag": “av",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://github.com/gr294949/sing-box-ruleset/raw/main/domainset/av.srs",
-        "download_detour": "proxy"
-      },
-      {
         "tag": "reject_ip",
         "type": "remote",
         "format": "binary",
@@ -906,6 +898,13 @@
         "type": "remote",
         "format": "binary",
         "url": "https://github.com/gr294949/sing-box-ruleset/raw/main/non_ip/cdn.srs",
+        "download_detour": "proxy"
+      },
+      {
+        "tag": "av",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://github.com/gr294949/sing-box-ruleset/raw/main/domainset/av.srs",
         "download_detour": "proxy"
       },
       {
